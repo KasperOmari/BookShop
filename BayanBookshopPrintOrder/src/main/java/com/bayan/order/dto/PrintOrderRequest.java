@@ -1,7 +1,7 @@
 package com.bayan.order.dto;
 
-import lombok.*;
-import org.springframework.stereotype.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 

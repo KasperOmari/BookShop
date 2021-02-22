@@ -1,12 +1,13 @@
 package com.bayan.order.dto.mapper;
 
-import com.bayan.order.dto.*;
-import com.bayan.order.entity.*;
-import com.bayan.order.repository.*;
-import org.mapstruct.*;
-import org.mapstruct.factory.*;
+import com.bayan.order.dto.PrintOrderRequest;
+import com.bayan.order.dto.PrintOrderResponse;
+import com.bayan.order.entity.PrintOrder;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.factory.Mappers;
 
-import java.util.*;
+import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface PrintOrderMapper {

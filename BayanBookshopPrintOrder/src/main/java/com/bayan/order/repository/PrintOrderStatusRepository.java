@@ -1,11 +1,6 @@
 package com.bayan.order.repository;
 
-import com.bayan.order.entity.*;
-import org.springframework.data.jpa.repository.*;
+import com.bayan.order.entity.PrintOrderStatus;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.*;
-
-public interface PrintOrderStatusRepository extends JpaRepository<PrintOrderStatus, Long> {
-
-}
-
+public interface PrintOrderStatusRepository extends JpaRepository<PrintOrderStatus, Long> { }

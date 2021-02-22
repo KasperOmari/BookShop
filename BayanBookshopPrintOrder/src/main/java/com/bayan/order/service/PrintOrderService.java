@@ -1,10 +1,10 @@
 package com.bayan.order.service;
 
-import com.bayan.order.dto.*;
-import com.bayan.order.entity.*;
-import org.springframework.stereotype.*;
+import com.bayan.order.dto.PrintOrderRequest;
+import com.bayan.order.dto.PrintOrderResponse;
+import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.List;
 
 @Service
 public interface PrintOrderService {

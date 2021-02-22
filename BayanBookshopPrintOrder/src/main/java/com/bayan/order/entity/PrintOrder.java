@@ -1,13 +1,21 @@
 package com.bayan.order.entity;
 
-import lombok.*;
-import org.hibernate.annotations.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.*;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import java.time.*;
-import java.util.*;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -18,8 +26,8 @@ import java.util.*;
 public class PrintOrder {
 
     @Id
-    @SequenceGenerator(name="seq", initialValue=100000, allocationSize=100)
-    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq")
+    @SequenceGenerator(name = "seq", initialValue = 100000, allocationSize = 100)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
     @Column(name = "id", updatable = false, nullable = false)
     @EqualsAndHashCode.Include
     private Long printOrderId;
