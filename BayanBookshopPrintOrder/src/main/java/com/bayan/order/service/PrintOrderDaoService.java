@@ -54,6 +54,10 @@ public class PrintOrderDaoService implements PrintOrderService {
     }
 
     public void deletePrintOrder(Long printOrderId) {
-        printOrderRepository.deleteById(printOrderId);
+        if (printOrderRepository.existsById(printOrderId)) {
+            printOrderRepository.deleteById(printOrderId);
+        } else {
+            throw new PrintOrderNotFoundException(printOrderId);
+        }
     }
 }
